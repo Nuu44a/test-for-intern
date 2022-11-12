@@ -1,5 +1,5 @@
 # test-for-intern
-##Test for DevOps intern
+## Test for DevOps intern
 
 - You have to create a bash script, which can accept a string of arguments of random length
 - The first argument can be the port number for further processing. The rest of the arguments are assumed as people's names.
@@ -13,7 +13,7 @@
 - The rest of points, as well as the choice of meme, are at your decision.
 
 
-##Тест для стажера-ДевОпса
+## Тест для стажера-ДевОпса
 
 - Необходимо создать bash-скрипт, которому на вход может подаваться строка аргументов произвольной длины. 
 - Первый аргумент может быть номером порта для дальнейшей обработки. Остальные аргументы подразумеваются, как имена людей.
