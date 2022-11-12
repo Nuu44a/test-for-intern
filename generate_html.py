@@ -1,7 +1,6 @@
 import sys
 
 def main():
-    print("len =", len(sys.argv))
 
     with open("index.html", "w") as ouf:
         print("<HTML><HEAD><TITLE>Hello, World!</TITLE></HEAD><BODY><CENTER>", file=ouf)

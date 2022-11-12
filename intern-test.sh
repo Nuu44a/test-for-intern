@@ -1,11 +1,7 @@
 #!/usr/bin/bash
 
 echo "Let's start our pipeline!"
-#echo "Number of parameters: $#"
-#echo "Parameters as one string: $@"
-#echo "Parameters as a different words: $*"
-echo
-#echo "Will start following string:"
+echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
 
 STRING=""
 NUM_OF_ARGS=$#
@@ -25,20 +21,20 @@ if [[ $NUM_OF_ARGS -ge 1 ]]; then
     fi
   fi
 
-# Generate an index.html
-
-#  for VAR in $@; do
+# Prepearing string of arguments for generating index.html
   for (( i=$START_ARG_NUM; i <= $NUM_OF_ARGS; i++ )); do
     STRING="$STRING ${!i}"
-    echo ${i}
-    echo $STRING
   done
 fi
-echo "python3 generate_html.py $STRING"
+
+# Generating index.html
 python3 generate_html.py $STRING
-cat index.html
-echo "docker build -t intern ."
+
+# Build docker image
 docker build -t intern .
-echo "docker run -it -p ${PORT}:80"
+
+# Run docker container
 docker run -it -p ${PORT}:80 intern
+
+echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
 echo "Finished"
